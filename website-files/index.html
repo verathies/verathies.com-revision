@@ -1,0 +1,148 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vera Thies | Portfolio</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <!-- custom fonts here-->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!----------------------------------------------------------    AUTHOR'S CUSTOM CODE     --------------------------------------------------------------------->
+
+
+  
+  <div class="container">
+    
+    <main>
+      <div id="hero">
+        <h1>Hi There! I'm Vera Thies.</h1>
+        <p>I am a web developer, designer and creative thinker in Barcelona.</p>
+      </div>
+
+      <div id="skillset">
+        <h2>My Skillset</h2>
+        <p id="skill-description">I love clean code and bringing great designs to life!</p>
+        <div class="full-width">
+          <div class="third-width">
+            <p class="skill-icon"><i class="fas fa-pencil-ruler"></i></p>
+            <h3>Web Design</h3>
+            <p>Need a website? Contact me and I'll create a design specifically adjusted to your needs.</p>
+          </div>
+          <div class="third-width">
+            <p class="skill-icon"><i class="fab fa-css3"></i></p>
+            <h3>Front End Development</h3>
+            <p>Already have a designer's PSD? I'll use my skills in HTML, CSS and JavaScript to create a responsive website for you!</p>
+          </div>
+          <div class="third-width">
+            <p class="skill-icon"><i class="far fa-file-code"></i></p>
+            <h3>Version Management</h3>
+            <p>I use Git, Github and the Terminal for version control. It's a great way to store all those projects or work together online.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="portfolio">
+        <h2>My Recent Work</h2>
+        <p>Check out some of my latest projects!</p>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <a href="https://verathies.github.io/206-unplugged-retreat/" target="_blank"><img src="img/unplugged-screenshot.png" style="width:100%"></a>
+          </div>
+          <div class="mySlides fade">
+            <a href="https://verathies.github.io/dou-pasteleria/" target="_blank"><img src="img/dou-screenshot.png" style="width:100%"></a>
+          </div>
+          <div class="mySlides fade">
+            <a href="https://verathies.github.io/102-javascript-electionmap/" target="_blank"><img src="img/electionmap-screenshot.png" style="width:100%"></a>
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
+
+      <div id="about">
+        <div class="full-width">
+          <div class="half-width">
+            <figure><img src="img/verathies.jpg" alt="headshot vera">
+            </figure>
+          </div>
+          <div class="half-width">
+            <h3>A little bit about me</h3>
+            <p>
+              I am passionate about the web!<br>
+              Once I discovered my passion for 
+              front-end development, I taught myself how to code 
+              in HTML, CSS and Javascript. I’m proactive working 
+              with an analytical mindset and an eye for detail. 
+            </p>
+            <a href="#contact"><button class="button">Contact me!</button></a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <section id="contact">
+          <h2>Let's connect</h2>
+          <div class="full-width">
+              <div class="third-width">
+                  <h3>Hire Me</h3>
+                  <p>+34 633 260 421<br>
+                      <a href="mailto:vera.thies94@gmail.com" target="_top"> vera.thies94@gmail.com</a> 
+                  </p>
+              </div>
+              <div class="third-width">
+                  <h3>Follow Me</h3>
+                  <div class="social-icon">
+                    <p><a href="https://es.linkedin.com/in/vera-thies-4b7a1a95" target="_blank"><i class="fab fa-linkedin"></i></a></p>    
+                    <p><a href="https://github.com/verathies" target="_blank"><i class="fab fa-github-square"></i></a></p>
+                </div>
+              </div>
+              <div class="third-width">
+                  <h3>Meet Me</h3>
+                  <p>Barcelona, Spain<br>
+                  Let's grab a coffee together!</p>
+              </div>
+          </div>
+          <div id="copyright">
+              <p>Copyright 2020 | Vera Thies</p>
+          </div>
+      </section>
+    </footer>  
+  </div>
+
+
+
+
+  <!---------------------------------------------------------- END OF AUTHOR'S CUSTOM CODE  ------------------------------------------------------------------------>
+  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
