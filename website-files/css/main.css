@@ -109,9 +109,8 @@ textarea {
 	justify-content: center; 
 	align-items: center; 
 	flex-flow: row wrap; 
-  max-width:  1450px;  /******max-width for desktop*****/
   }
-
+ 
 
   .full-width {
   width: 100%; 
@@ -130,13 +129,16 @@ textarea {
   width: 100%;
 }
 
-  .third-width {
+  #skillset .third-width, #contact .third-width {
   display: flex; 
 	align-items: center;
 	justify-content: center;
   flex-flow: row wrap; 
   width: 100%;
+  padding: 0 30px 20px 30px;
+  text-align: center;
 }
+
 
 footer {
   width: 100%; 
@@ -151,15 +153,79 @@ h2 {
   font-size: 1.3em;
   color: #857885;
 }
+
+aside {
+  font-size: 0.875em;
+  text-align: center;
+  color: #857885;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  padding-top: 15px;
+}
 /**************************************************************************************************************************
                 HEADER CURTAIN MENU - MOBILE 
 **************************************************************************************************************************/
 
 
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(133, 120, 133, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #F4F1EF;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
 
 /**************************************************************************************************************************
                 HERO AREA - MOBILE 
 **************************************************************************************************************************/
+
+#hamburger {
+  font-size: 1.3em;
+  color: #A9A299;
+  padding: 10px 0 0 10px; 
+}
+
 #hero {
   background: url('../img/desk.jpg');
   min-height: 220px; 
@@ -173,7 +239,7 @@ h1 {
   color: #857885;
   font-family: 'Roboto', sans-serif;
   font-size: 1.3em;
-  padding: 70px 60px 0px 25px; 
+  padding: 50px 60px 0px 25px; 
   text-align: center;  
   margin: 0 auto; 
 }
@@ -193,16 +259,6 @@ h1 {
   padding-bottom: 50px;
 }
 
-#skillset .third-width {
-    width: 100%;  
-    text-align: center;
-    padding: 0 30px;
-}
-
-#skill-description {
-  font-size: 0.875em;
-  text-align: center;
-}
 #skillset h2 {
   color: #857885;
 }
@@ -210,7 +266,7 @@ h1 {
 #skillset h3 {
   color: #857885;
   font-size: 1.1em;
-  margin-bottom: 0;
+  margin: 5px 0 0 0 ;
 }
 #skillset .skill-icon {
   color: #C49075;
@@ -234,13 +290,7 @@ h1 {
   #portfolio h2 {
     color: #857885;
   }
-  #portfolio p {
-    color: #857885;
-    text-align: center;
-    font-size: 1.1em;
-    padding-bottom: 10px;
-  }
-
+  
   #portfolio img {
     border: 1px solid #bbb;
   }
@@ -251,7 +301,7 @@ h1 {
     max-width: 1000px;
     position: relative;
     margin: auto;
-    padding: 0 50px 10px 50px;
+    padding: 20px 50px 10px 50px;
   }
   .mySlides {
     display: none;
@@ -357,7 +407,7 @@ h1 {
     background-color: #C49075;
     border: none;
     color: white;
-    padding: 13px;
+    padding: 13px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -411,30 +461,6 @@ footer .social-icon i {
   text-align: center;
   padding: 40px 0 10px 0; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -526,6 +552,15 @@ footer .social-icon i {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+/* Media query for Curtain Menu: When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
@@ -543,21 +578,225 @@ footer .social-icon i {
 **************************************************************************************************************************/
 
 @media only screen and (min-width: 768px) {
-
+/* General styles */ 
 .half-width {
   width: 50%; 
+  justify-content: flex-start;
 }
 
-.third-width {
+#skillset .third-width, #contact .third-width {
   width: 33%; 
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 20px 20px 20px;
+  align-self: flex-start;
 }
 
-/*******************************************      ABOUT TABLET     ********************************************************/
-
-
-
+h2 {
+  font-size: 2.2em;
+  padding-top: 80px;
 }
 
+aside {
+  font-size: 1.3em;
+}
+
+/*******************************************  CURTAIN MENU TABLET *******************************************/
+
+.overlay a {
+  font-size: 1.8em;
+}
+
+/*******************************************      HERO TABLET     ********************************************************/
+
+#hamburger {
+  font-size: 2.3em;
+  padding: 30px 0 0 30px; 
+}
+
+#hero {
+  min-height: 420px;
+}
+
+h1 {
+  font-size: 2.5em; 
+  padding-top: 80px;
+}
+
+#hero p {
+  font-size: 1.9em;
+  padding: 5px 200px 30px 150px;
+}
+
+/*******************************************   SKILLSET TABLET *******************************************/
+
+
+#skillset h3 {
+  font-size: 1.32em;
+  margin: 20px 0 0 0;
+}
+
+#skillset .skill-icon {
+  font-size: 3.3em;
+  text-align: center;
+}
+
+#skillset p {
+  font-size: 1.1875em;
+  line-height: 27px;
+}
+
+/******************************************* PORTFOLIO TABLET *******************************************/
+#portfolio {
+  padding-bottom: 80px;
+}
+.slideshow-container {
+  padding: 30px 60px 10px 60px;
+}
+
+.prev, .next {
+  font-size: 2em;
+  padding: 25px;
+}
+
+/******************************************* ABOUT TABLET *******************************************/
+
+#about {
+  padding: 50px 20px;
+}
+#about figure {
+  width:90%;
+}
+#about img {
+  border-radius: 2%;
+  border: 1px solid #bbb; 
+}
+#about h3 {
+  font-size: 1.8em;
+  padding-left: 40px;
+  text-align: left;
+}
+
+#about p {
+  font-size: 1.1875em;
+  padding: 10px 20px 20px 40px;
+  text-align: left;
+}
+#button-container { 
+  text-align: center;
+  width: 100%;
+}
+
+.button {
+  font-size: 1.4em;
+  padding: 16px 35px;
+  margin: 5px 2px;
+}
+
+/******************************************* FOOTER TABLET *******************************************/
+#contact .third-width {
+  padding: 0 30px;
+}
+#contact h3 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+#contact p {
+  font-size: 1.1875em;
+  margin-top: 0;
+}
+
+#copyright{
+  font-size: 0.875em;
+  padding: 40px 0 20px 0;
+}
+} /* End of media query tablet*/ 
+
+/**************************************************************************************************************************
+                MEDIA QUERY  DESKTOP
+**************************************************************************************************************************/
+@media only screen and (min-width: 1200px){
+
+
+.overlay a {
+  font-size: 2.1em;
+}
+
+h2 {
+  font-size: 2.4em;
+  padding-top: 100px;
+}
+#skillset h3, #about h3, #contact h3 {
+  font-size: 2.2em;
+}
+aside {
+  font-size: 1.8em;
+  padding-bottom: 40px;
+}
+
+
+/******************************************* HERO DESKTOP *******************************************/
+#hamburger{
+  padding: 30px 0 0 40px;
+}
+#hero {
+  min-height: 560px;
+}
+
+h1 {
+  font-size: 3em;
+  padding: 150px 0 20px 0;
+}
+#hero p {
+  font-size: 2.3em;
+  padding: 5px 250px 30px 200px;
+}
+
+/*******************************************   SKILLSET DESKTOP *******************************************/
+
+
+#skillset .skill-icon{
+  font-size: 4.5em;
+}
+
+#skillset p{
+  font-size: 1.8em;
+  line-height: 40px;
+}
+/******************************************* PORTFOLIO DESKTOP *******************************************/
+#portfolio {
+  padding-bottom: 120px;
+}
+.prev, .next {
+  font-size: 4em;
+}
+
+/******************************************* ABOUT DESKTOP*******************************************/
+#about {
+  padding: 70px 50px 100px 50px;
+}
+
+
+#about p {
+  font-size: 1.8em;
+  line-height: 40px;
+}
+.button {
+  font-size: 2em;
+  padding: 20px 45px;
+  margin-top: 20px;
+}
+/******************************************* FOOTER DESKTOP *******************************************/
+
+#contact p {
+  font-size: 1.8em;
+  padding: 30px 0 50px 0;
+}
+
+#copyright {
+  padding-bottom: 0;
+}
+}/* End of desktop media query*/
 
 /* ==========================================================================
    Print styles.
