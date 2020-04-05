@@ -1,0 +1,28 @@
+domain bought at https://dcc.godaddy.com/domains/
+
+user:Vera94
+password: Leo.nie88
+
+
+hosted at dreamhost
+
+host:verathies.com
+
+user: vera.thies94@gmail.com 
+password: Leo.nie88
+
+FTP Server   :  copycat.dreamhost.com
+FTP Username :  dh_a78s7e
+FTP Password: *TXYm8wD
+
+
+NS	ns1.dreamhost.com.
+NS	ns2.dreamhost.com.
+NS	ns3.dreamhost.com.
+
+New user dh_7tmujs
+New password CcapVsT8 
+
+Host: copycat.dreamhost.com
+User: dh_7tmujs
+Port: 22

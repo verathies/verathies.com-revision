@@ -136,7 +136,6 @@ textarea {
   flex-flow: row wrap; 
   width: 100%;
   padding: 0 30px 20px 30px;
-  text-align: center;
 }
 
 
@@ -150,7 +149,7 @@ h2 {
   padding: 50px 0 0 0;
   margin: 0 auto;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.5em;
   color: #857885;
 }
 
@@ -196,7 +195,7 @@ aside {
   font-weight: 300;
   padding: 8px;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: #F4F1EF;
   display: block; /* Display block instead of inline */
   transition: 0.3s; /* Transition effects on hover (color) */
@@ -228,8 +227,10 @@ aside {
 
 #hero {
   background: url('../img/desk.jpg');
-  min-height: 220px; 
-  background-size: cover; 
+  background-attachment:fixed;
+  min-height:  300px; 
+  background-size: cover;
+  background-position: 70% 50%;
   margin-top: 0;
   padding-top: 0;
   overflow: auto;
@@ -239,7 +240,7 @@ h1 {
   color: #857885;
   font-family: 'Roboto', sans-serif;
   font-size: 1.3em;
-  padding: 50px 60px 0px 25px; 
+  padding: 70px 60px 0px 25px; 
   text-align: center;  
   margin: 0 auto; 
 }
@@ -249,7 +250,7 @@ h1 {
   font-size: 1em;  
   text-align: center;
   margin: 0 auto; 
-  padding: 5px 100px 30px 80px; 
+  padding: 5px 115px 40px 80px; 
 }
 /**************************************************************************************************************************
                 SKILLSET  - MOBILE 
@@ -265,7 +266,7 @@ h1 {
 
 #skillset h3 {
   color: #857885;
-  font-size: 1.1em;
+  font-size: 1.1875em;
   margin: 5px 0 0 0 ;
 }
 #skillset .skill-icon {
@@ -273,12 +274,43 @@ h1 {
   font-size: 2.8em;
   width: 100%;
   margin: 20px 0 0 0;
+  text-align: center;
 }
 #skillset p {
   color: #857885;
   font-weight: 300;
+  text-align: justify;
+  margin-top: 0;
 }
+.square {
+  border: solid 1px #eee;
+  margin: 20px 30px 5px 30px;
+  border-radius: 5%;
+  box-shadow: 5px 7px #eee;
+  height: 300px;
+}
+/*
+#mymove1 { 
+	animation-name: movein; 				
+  animation-duration: 0.5s; 
+  position: relative;       			
+  } 
+  #mymove2 { 
+    animation-name: movein; 				
+    animation-duration: 1.5s; 
+    position: relative;       			
+    } 
+    #mymove3 { 
+      animation-name: movein; 				
+      animation-duration:2.5s; 
+      position: relative;       			
+      } 
 
+
+@keyframes movein{ 
+  from {top: -80px;}
+  to {top: 0px;}
+	}   */
 /**************************************************************************************************************************
                 PORTFOLIO  - MOBILE 
 **************************************************************************************************************************/
@@ -390,17 +422,17 @@ h1 {
   #about h3 {
     color: #857885;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.1875em;
     margin-bottom: 10px; 
   }
 
   #about p {
     color: #857885;
     font-weight: 300; 
-    font-size: 0.875em;
+    font-size: 1em;
     padding: 0 50px 20px 50px;
     margin: 0 auto; 
-    text-align: center;
+    text-align: justify;
     font-family: 'Roboto', sans-serif;
   }
   .button {
@@ -414,6 +446,7 @@ h1 {
     font-size: 1em;
     margin: 4px 2px;
     border-radius: 30px;
+    cursor: pointer;
   }
 
 /**************************************************************************************************************************
@@ -434,7 +467,7 @@ h1 {
   text-align: center;
   width: 100%; 
   margin: 30px 0 0 0;
-  font-size: 1.2em;
+  font-size: 1.1875em;
 }
 
 #contact a {
@@ -457,7 +490,7 @@ footer .social-icon i {
 } 
 
 #copyright {
-  font-size: 0.75em; 
+  font-size: 0.875em; 
   text-align: center;
   padding: 40px 0 10px 0; 
 }
@@ -585,26 +618,25 @@ footer .social-icon i {
 }
 
 #skillset .third-width, #contact .third-width {
-  width: 33%; 
+  width: 30%; 
   align-items: flex-start;
   justify-content: center;
-  padding: 0 20px 20px 20px;
-  align-self: flex-start;
+  padding: 25px 20px 20px 20px;
 }
 
 h2 {
-  font-size: 2.2em;
+  font-size: 2em;
   padding-top: 80px;
 }
 
 aside {
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 
 /*******************************************  CURTAIN MENU TABLET *******************************************/
 
 .overlay a {
-  font-size: 1.8em;
+  font-size: 2.2em;
 }
 
 /*******************************************      HERO TABLET     ********************************************************/
@@ -615,36 +647,46 @@ aside {
 }
 
 #hero {
-  min-height: 420px;
+  min-height: 580px;
 }
 
 h1 {
   font-size: 2.5em; 
-  padding-top: 80px;
+  padding-top: 120px;
 }
 
 #hero p {
-  font-size: 1.9em;
-  padding: 5px 200px 30px 150px;
+  font-size: 2.1em;
+  padding: 20px 240px 30px 150px;
 }
 
 /*******************************************   SKILLSET TABLET *******************************************/
 
 
 #skillset h3 {
-  font-size: 1.32em;
+  font-size: 1.5em;
   margin: 20px 0 0 0;
+  padding-left: 10px;
 }
 
 #skillset .skill-icon {
-  font-size: 3.3em;
+  font-size: 3.5em;
   text-align: center;
 }
 
 #skillset p {
   font-size: 1.1875em;
   line-height: 27px;
+  text-align: left;
+  padding: 10px 0 10px 10px;
+  text-align: left;
 }
+
+.square {  /*3 skillset boxes*/
+  margin:0 5px;
+  height: 400px;
+}
+
 
 /******************************************* PORTFOLIO TABLET *******************************************/
 #portfolio {
@@ -672,7 +714,7 @@ h1 {
   border: 1px solid #bbb; 
 }
 #about h3 {
-  font-size: 1.8em;
+  font-size: 1.5em;
   padding-left: 40px;
   text-align: left;
 }
@@ -698,7 +740,7 @@ h1 {
   padding: 0 30px;
 }
 #contact h3 {
-  font-size: 1.8em;
+  font-size: 1.5em;
   margin-bottom: 20px;
 }
 #contact p {
@@ -707,7 +749,7 @@ h1 {
 }
 
 #copyright{
-  font-size: 0.875em;
+  font-size: 1em;
   padding: 40px 0 20px 0;
 }
 } /* End of media query tablet*/ 
@@ -723,14 +765,14 @@ h1 {
 }
 
 h2 {
-  font-size: 2.4em;
+  font-size: 2em;
   padding-top: 100px;
 }
 #skillset h3, #about h3, #contact h3 {
-  font-size: 2.2em;
+  font-size: 1.5em;
 }
 aside {
-  font-size: 1.8em;
+  font-size: 1.3em;
   padding-bottom: 40px;
 }
 
@@ -740,16 +782,16 @@ aside {
   padding: 30px 0 0 40px;
 }
 #hero {
-  min-height: 560px;
+  min-height: 680px;
 }
 
 h1 {
-  font-size: 3em;
-  padding: 150px 0 20px 0;
+  font-size: 3.5em;
+  padding: 180px 0 30px 0;
 }
 #hero p {
-  font-size: 2.3em;
-  padding: 5px 250px 30px 200px;
+  font-size: 2.5em;
+  padding: 5px 400px 30px 250px;
 }
 
 /*******************************************   SKILLSET DESKTOP *******************************************/
@@ -760,8 +802,12 @@ h1 {
 }
 
 #skillset p{
-  font-size: 1.8em;
-  line-height: 40px;
+  font-size: 1.1875em;
+  line-height: 26px;
+}
+
+.square {
+  margin: 0 10px;
 }
 /******************************************* PORTFOLIO DESKTOP *******************************************/
 #portfolio {
@@ -778,18 +824,18 @@ h1 {
 
 
 #about p {
-  font-size: 1.8em;
-  line-height: 40px;
+  font-size: 1.1875em;
+  line-height: 30px;
 }
 .button {
-  font-size: 2em;
+  font-size: 1.875em;
   padding: 20px 45px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 /******************************************* FOOTER DESKTOP *******************************************/
 
 #contact p {
-  font-size: 1.8em;
+  font-size: 1.1875em;
   padding: 30px 0 50px 0;
 }
 

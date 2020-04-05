@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="icon" href="doc/lightbulb.svg">
   <!-- Place favicon.ico in the root directory -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <!-- custom fonts here-->
@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animate.css">
   <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -50,17 +51,17 @@
         <h2>My Skillset</h2>
         <aside>I love clean code and bringing great designs to life!</aside>
         <div class="full-width">
-          <div class="third-width">
+          <div class="third-width square wow fadeIn"data-wow-delay="0.25s">
             <p class="skill-icon"><i class="fas fa-pencil-ruler"></i></p>
             <h3>Web Design</h3>
             <p>Need a website? Contact me and I'll create a design specifically adjusted to your needs.</p>
           </div>
-          <div class="third-width">
+          <div class="third-width square wow fadeIn" data-wow-delay="0.5s">
             <p class="skill-icon"><i class="fab fa-css3"></i></p>
             <h3>Front End Development</h3>
             <p>Already have a designer's PSD? I'll use my skills in HTML, CSS and JavaScript to create a responsive website for you!</p>
           </div>
-          <div class="third-width">
+          <div class="third-width square wow fadeIn" data-wow-delay="0.75s">
             <p class="skill-icon"><i class="far fa-file-code"></i></p>
             <h3>Version Management</h3>
             <p>I use Git, Github and the Terminal for version control. It's a great way to store all those projects or work together online.</p>
@@ -107,7 +108,7 @@
               with an analytical mindset and an eye for detail. 
             </p>
             <div id="button-container">
-            <a href="#contact"><button class="button">Contact me!</button></a>
+            <a href="#contact"><button class="button wow bounceIn"data-wow-delay="0.5s">Contact me!</button></a>
           </div>
           </div>
           
@@ -154,6 +155,11 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/wow.min.js"></script> <!-- wow.js animation when section in view-->
+  <script>
+    new WOW().init();
+    </script>
+
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
