@@ -289,28 +289,7 @@ h1 {
   box-shadow: 5px 7px #eee;
   height: 300px;
 }
-/*
-#mymove1 { 
-	animation-name: movein; 				
-  animation-duration: 0.5s; 
-  position: relative;       			
-  } 
-  #mymove2 { 
-    animation-name: movein; 				
-    animation-duration: 1.5s; 
-    position: relative;       			
-    } 
-    #mymove3 { 
-      animation-name: movein; 				
-      animation-duration:2.5s; 
-      position: relative;       			
-      } 
 
-
-@keyframes movein{ 
-  from {top: -80px;}
-  to {top: 0px;}
-	}   */
 /**************************************************************************************************************************
                 PORTFOLIO  - MOBILE 
 **************************************************************************************************************************/
