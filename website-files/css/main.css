@@ -227,7 +227,6 @@ aside {
 
 #hero {
   background: url('../img/desk.jpg');
-  background-attachment:fixed;
   min-height:  300px; 
   background-size: cover;
   background-position: 70% 50%;
@@ -762,6 +761,7 @@ aside {
 }
 #hero {
   min-height: 680px;
+  background-attachment:fixed;
 }
 
 h1 {
